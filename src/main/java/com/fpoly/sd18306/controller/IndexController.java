@@ -49,11 +49,6 @@ public class IndexController {
 	    return "client/Forgotpassword";
 	}
 	
-	@RequestMapping("/sanpham")
-	public String getSanpham() {
-		return "client/sanpham";
-	}
-	
 	@RequestMapping("/taohoadon")
 	public String getTaohoadon() {
 	    return "client/laphoadon";
