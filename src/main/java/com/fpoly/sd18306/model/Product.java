@@ -1,16 +1,21 @@
 package com.fpoly.sd18306.model;
 
+import java.util.List;
+
 import org.hibernate.validator.constraints.Length;
+import org.springframework.web.multipart.MultipartFile;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @AllArgsConstructor
-public class ProductModel {
+@NoArgsConstructor
+public class Product {
 	
 	private int id;
 
@@ -27,6 +32,5 @@ public class ProductModel {
 	@NotEmpty(message = "Mô tả không được bỏ trống")
 	private String description;
 	
-	@NotEmpty(message = "Hình ảnh không được bỏ trống")
-	private String images;
+	private List<MultipartFile> file;
 }
